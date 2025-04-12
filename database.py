@@ -1,5 +1,5 @@
 from pymongo import MongoClient
-from config import Congig
+from config import Config
 import os
 
 # Establish MongoDB connection
