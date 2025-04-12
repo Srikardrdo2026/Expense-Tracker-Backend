@@ -6,7 +6,7 @@ load_dotenv()
 
 class Config:
     SECRET_KEY = os.getenv("SECRET_KEY", "your_secret_key")
-    MONGO_URI = os.getenv("MONGO_URI", "mongodb://localhost:27017/expense_tracker")
+    MONGO_URI = os.getenv("MONGO_URI")
     DEBUG = os.getenv("DEBUG", "True").lower() == "true"
 
     # JWT Configuration
