@@ -14,7 +14,8 @@ TEMPLATE_DIR = os.path.join(BASE_DIR, "../frontend/templates")  # Move to fronte
 
 app = Flask(__name__, template_folder=TEMPLATE_DIR)  
 app.config.from_object(Config)
-CORS(app, supports_credentials=True, origins=["https://expense-tracker-frontend-opal.vercel.app"])
+CORS(app, supports_credentials=True, origins=["https://srikardrdo2026.github.io"])
+
 
 # Register API routes
 app.register_blueprint(auth_bp, url_prefix="/api")
