@@ -8,11 +8,8 @@ from routes.budgets import budgets_bp
 from websockets import sock  # Import WebSocket instance
 import os
 
-# 🔥 Set correct template folder path
-BASE_DIR = os.path.abspath(os.path.dirname(__file__))  # Get backend directory
-TEMPLATE_DIR = os.path.join(BASE_DIR, "../frontend/templates")  # Move to frontend/templates
 
-app = Flask(__name__, template_folder=TEMPLATE_DIR)  
+app = Flask(__name__)  
 app.config.from_object(Config)
 CORS(app, supports_credentials=True, origins=["https://srikardrdo2026.github.io"])
 
