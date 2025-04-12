@@ -28,12 +28,12 @@ sock.init_app(app)
 # ✅ **Fix: Add a home route**
 @app.route("/", methods=["GET"])
 def home():
-    return render_template("index.html")  # Flask will now find index.html correctly
+    return jsonify({"message": "Expense Tracker Backend API"}), 200
 
 # ✅ **Fix: Change Health Check Route to Avoid Conflict**
 @app.route("/health", methods=["GET"])
 def health_check():
-    return jsonify({"message": "Expense Tracker API is running"}), 200
+    return jsonify({"status": "ok"}), 200
 
 if __name__ == "__main__":
     app.run(debug=True, host="0.0.0.0", port=5000, threaded=True)
