@@ -1,6 +1,6 @@
 from flask import Blueprint, request, jsonify, current_app
-from backend.database import budgets_collection, expenses_collection
-from backend.auth import decode_jwt, AuthError
+from database import budgets_collection, expenses_collection
+from auth import decode_jwt, AuthError
 from bson.objectid import ObjectId
 from pymongo.errors import OperationFailure
 from datetime import datetime, timezone
