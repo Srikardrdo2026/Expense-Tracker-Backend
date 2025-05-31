@@ -3,12 +3,12 @@ from flask_session import Session
 from flask_cors import CORS
 from flask_sock import Sock
 
-from .config import Config
-from .auth import auth_bp
-from .routes.users import users_bp
-from .routes.expenses import expenses_bp
-from .routes.budgets import budgets_bp
-from .websockets import sock
+from config import Config
+from auth import auth_bp
+from routes.users import users_bp
+from routes.expenses import expenses_bp
+from routes.budgets import budgets_bp
+from websockets import sock
 
 import os
 
