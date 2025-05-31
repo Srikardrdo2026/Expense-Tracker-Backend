@@ -3,7 +3,7 @@ import os
 from flask import Blueprint, request, jsonify, session
 from werkzeug.security import generate_password_hash, check_password_hash
 from datetime import datetime, timezone, timedelta
-from .database import users_collection
+from database import users_collection
 
 auth_bp = Blueprint("auth", __name__)
 
